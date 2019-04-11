@@ -14,14 +14,14 @@ const cellClicked = e => {
 	if(clicking) return;
 	clicking = true;
 	console.log('User has clicked');
-	return wait(1000)
+	return wait(2000)
 		.then(() => {
 			console.log('%ccellClicked function starting ... ', 'background: #eee; padding: 3px;');
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			console.group('Checking if cell is occupied ... ');
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			if (e.target.textContent !== '') {
@@ -30,21 +30,21 @@ const cellClicked = e => {
 				console.log('%cCell is free and clear big daddy!', 'color: white; background: green; padding: 3px;');
 			}
 			console.groupEnd();
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			console.group('Drawing current player ... ');
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			console.log('Current Player value to draw:  %c' + currentPlayer, 'background: #0091ea; color: white; padding: 3px;');
 			console.groupEnd();
 			e.target.textContent = currentPlayer;
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			console.group('Toggling current player ... ');
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			if (currentPlayer === 'X') {
@@ -52,7 +52,7 @@ const cellClicked = e => {
 			} else {
 				console.log('is currentPlayer (' + currentPlayer + ') === "X" ? :  %c' + 'No (false)', 'background: black; color: white; padding: 3px;');
 			}
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			if (currentPlayer === 'X') {
@@ -63,7 +63,7 @@ const cellClicked = e => {
 				currentPlayer = 'X';
 			}
 			console.groupEnd();
-			return wait(1500);
+			return wait(2000);
 		})
 		.then(() => {
 			console.log('%ccellClicked function ended', 'background: #eee; padding: 3px;');
